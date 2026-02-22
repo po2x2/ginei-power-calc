@@ -15,10 +15,10 @@
 </head>
 <body>
 <div class="c">
-  <div class="r"><label>Level</label><input id="level" type="number" min="1" max="750" value="1"></div>
-  <div class="r"><label>Stats</label><input id="stats" value="30"></div>
-  <div class="r"><label>Buff %</label><input id="buff" value="0"></div>
-  <div class="r"><label>Flat</label><input id="flat" value="0"></div>
+  <div class="r"><label>レベル</label><input id="level" type="number" min="1" max="750" value="1"></div>
+  <div class="r"><label>資質</label><input id="stats" value="30"></div>
+  <div class="r"><label>バフ(%)</label><input id="buff" value="0"></div>
+  <div class="r"><label>固定値</label><input id="flat" value="0"></div>
   <button id="go" type="button">Calc</button>
   <pre id="out"></pre>
 </div>
@@ -154,7 +154,7 @@ function calc(){
   const base = stats * m;
   const total = base * totalP + flat;
 
-  $("out").textContent = `Base: ${fmt(base)}\nTotal: ${fmt(total)}`;
+  $("out").textContent = `基礎: ${fmt(base)}\n総戦力: ${fmt(total)}`;
 }
 
 $("go").addEventListener("click", calc);
